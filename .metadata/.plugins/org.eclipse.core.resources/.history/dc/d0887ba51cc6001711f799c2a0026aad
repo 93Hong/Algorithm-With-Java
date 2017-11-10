@@ -30,11 +30,22 @@ public class Main {
 		}
 		q = new LinkedList<>();
 		q.add(new Point(0, 0));
-		visit[0][0] = 1;
-		
-		solve();
 
-		System.out.println(visit[N-1][M-1]);
+		solve();
+		
+		for (int i=0; i<N; i++) {
+			for (int j=0; j<M; j++) {
+				System.out.print(visit[i][j]);
+			}
+			System.out.println();
+		}
+
+		for (int i=0; i<N; i++) {
+			for (int j=0; j<M; j++) {
+				System.out.print(visit[i][j]);
+			}
+			System.out.println();
+		}
 	}
 
 	public static void solve() {
@@ -43,17 +54,16 @@ public class Main {
 			int y = q.peek().y;
 			int x = q.peek().x;
 			q.poll();
-			
+			System.out.println(y + " " + x);
 
 			for (int i = 0; i < 4; i++) {
-				
 				int dy = y + dir[i][0];
 				int dx = x + dir[i][1];
 				
 				if (dy < 0 || dy >= N || dx < 0 || dx >= M)
 					continue;
 				
-				if (visit[dy][dx] == 0 && map[dy][dx] == '1') {
+				if (visit[dy][dx] == 0 && map[dy][dx] == 1) {
 					q.add(new Point(dy, dx));
 					visit[dy][dx] = visit[y][x] + 1;
 				}
