@@ -1,0 +1,41 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Main {
+	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+	static int N, M;
+
+	public static void main(String args[]) throws IOException {
+
+		String input = br.readLine();
+		String sub[] = input.split(" ");
+		N = Integer.parseInt(sub[0]);
+		M = Integer.parseInt(sub[1]);
+		
+		char[][] map = new char[N][M];
+
+		for (int i = 0; i < N; i++) {
+			map[i] = br.readLine().toCharArray();
+		}
+		Queue<Point> q = new LinkedList<>();
+
+		bw.write("Hi\n");
+		bw.flush();
+
+	}
+
+	static class Point {
+		int y, x;
+
+		Point(int y, int x) {
+			this.y = y;
+			this.x = x;
+		}
+	}
+}
