@@ -1,0 +1,8 @@
+
+public class Main {
+	static int M, N, K;
+	
+	public static void main(String args[]) {
+		
+	}
+}

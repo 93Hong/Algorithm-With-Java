@@ -1,0 +1,43 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+	static int M, N, K;
+	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static int[][] map;
+
+	public static void main(String args[]) throws IOException {
+		String[] sub = br.readLine().split(" ");
+		M = Integer.parseInt(sub[0]);
+		N = Integer.parseInt(sub[1]);
+		K = Integer.parseInt(sub[2]);
+
+		map = new int[M][N];
+
+		while (K-- > 0) {
+			int x, y, xx, yy;
+			String s[] = br.readLine().split(" ");
+			x = Integer.parseInt(s[0]);
+			y = M - Integer.parseInt(s[1]);
+			xx = Integer.parseInt(s[2]);
+			yy = M - Integer.parseInt(s[3]);
+
+			for (int i = yy; i < y; i++) {
+				for (int j = x; j < xx; j++) {
+					map[i][j] = 1;
+				}
+			}
+		}
+
+		for (int i = 0; i < M; i++) {
+			for (int j = 0; j < N; j++) {
+				
+			}
+		}
+	}
+	
+	public static void solve() {
+		
+	}
+}
