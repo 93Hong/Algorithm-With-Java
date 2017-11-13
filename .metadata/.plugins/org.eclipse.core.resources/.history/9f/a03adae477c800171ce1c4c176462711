@@ -1,0 +1,97 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Main {
+	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static int N, M, a, b;
+	static char map[][];
+	static int visit2[][], visit[][], dir[][] = { { 0, 1 }, { 0, -1 }, { 1, 0 }, { -1, 0 } };
+	static Queue<Point> q;
+
+	public static void main(String args[]) throws IOException {
+		String sub[] = br.readLine().split(" ");
+		N = Integer.parseInt(sub[0]);
+		M = Integer.parseInt(sub[1]);
+		map = new char[N][M];
+		visit = new int[N][M];
+		visit2 = new int[N][M];
+		q = new LinkedList<>();
+
+		for (int i = 0; i < N; i++) {
+			String s = br.readLine();
+			for (int j = 0; j < s.length(); j++) {
+				map[i][j] = s.charAt(j);
+			}
+		}
+
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < M; j++) {
+				if (map[i][j] == 'L' && visit[i][j] == 0) {
+					solve(i, j);
+					solve2(a, b);
+				}
+			}
+		}
+	}
+
+	public static void solve2(int y, int x) {
+		q.add(new Point(y, x));
+		visit2[y][x] = 1;
+
+		while (!q.isEmpty()) {
+			int yy = q.peek().y;
+			int xx = q.peek().x;
+			q.poll();
+
+			for (int i = 0; i < 4; i++) {
+				int dy = yy + dir[i][0];
+				int dx = xx + dir[i][1];
+
+				if (dy < 0 || dy >= N || dx < 0 || dx >= M)
+					continue;
+				if (map[dy][dx] == 'L' && visit2[dy][dx] == 0) {
+					q.add(new Point(dy, dx));
+					visit2[dy][dx] = 1;
+				}
+			}
+		}
+	}
+
+	public static void solve(int y, int x) {
+		q.add(new Point(y, x));
+		visit[y][x] = 1;
+
+		while (!q.isEmpty()) {
+			int yy = q.peek().y;
+			int xx = q.peek().x;
+			q.poll();
+
+			for (int i = 0; i < 4; i++) {
+				int dy = yy + dir[i][0];
+				int dx = xx + dir[i][1];
+
+				if (dy < 0 || dy >= N || dx < 0 || dx >= M)
+					continue;
+				if (map[dy][dx] == 'L' && visit[dy][dx] == 0) {
+					q.add(new Point(dy, dx));
+					visit[dy][dx] = 1;
+				}
+			}
+
+			a = yy;
+			b = xx;
+		}
+	}
+
+	public static class Point {
+		int y, x;
+
+		Point(int y, int x) {
+			this.y = y;
+			this.x = x;
+		}
+	}
+}

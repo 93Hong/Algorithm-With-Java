@@ -33,8 +33,7 @@ public class Main {
 		visit[x] = 1;
 		if (solve()) {
 			System.out.println(level);
-		}
-		else
+		} else
 			System.out.println(-1);
 
 	}

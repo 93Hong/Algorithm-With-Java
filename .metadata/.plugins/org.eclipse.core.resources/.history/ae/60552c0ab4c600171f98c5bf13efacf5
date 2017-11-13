@@ -1,9 +1,0 @@
-
-public class Main {
-	static int M, N, K;
-	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	
-	public static void main(String args[]) {
-		
-	}
-}
