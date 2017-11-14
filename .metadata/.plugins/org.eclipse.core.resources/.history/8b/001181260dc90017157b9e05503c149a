@@ -1,0 +1,5 @@
+package ModelInterface;
+
+public interface IKnight {
+	public void move(int dir, int moveOfBack);
+}

@@ -17,12 +17,10 @@ public class Main {
 		String sub[] = input.split(" ");
 		N = Integer.parseInt(sub[0]);
 		M = Integer.parseInt(sub[1]);
-
 		map = new int[N][M];
-		map[0][0] = 1;
-		q.add(new Point(0, 0));
 
 		int cnt = solve();
+		
 		if (cnt == N * M)
 			System.out.println("T" + (ans2 - 1));
 		else
@@ -31,6 +29,8 @@ public class Main {
 	}
 
 	public static int solve() {
+		map[0][0] = 1;
+		q.add(new Point(0, 0));
 		int ans = 1;
 
 		while (!q.isEmpty()) {

@@ -1,0 +1,25 @@
+package Service;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+import ModelImplement.Board;
+import ModelImplement.Knight;
+
+public class BfsAlgorithm {
+	public void solveKnight(int startY, int startX, Board board) {
+		Queue<Knight> queue = new LinkedList<>();
+		board.visit(startY, startX, 0);
+		queue.add(new Knight(startY, startX));
+		
+		while(!queue.isEmpty()) {
+			Knight knight = queue.peek();
+			int knightY = knight.getY();
+			int knightX = knight.getX();
+			
+			for (int i=0; i<8; i++) {
+				int nextKnightY = knightY + knight.nextLocation(i);
+			}
+		}
+	}
+}

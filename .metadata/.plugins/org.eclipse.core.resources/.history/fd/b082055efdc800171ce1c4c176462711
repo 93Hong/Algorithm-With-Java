@@ -1,0 +1,5 @@
+public interface IMenuItem {
+	public MenuItem(String name, int price);
+	public int cost();
+	public String getName();
+}

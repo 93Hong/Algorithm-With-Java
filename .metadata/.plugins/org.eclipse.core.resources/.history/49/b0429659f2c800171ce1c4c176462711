@@ -1,0 +1,4 @@
+
+public interface ICustomer {
+	public void order(String menuName);
+}

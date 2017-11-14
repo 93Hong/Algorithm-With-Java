@@ -1,0 +1,29 @@
+package ModelImplement;
+
+import ModelInterface.IKnight;
+
+public class Knight implements IKnight {
+	private int y, x;
+	private int movingY[] = {2, -2, 2, -2, 1, -1, 1, -1};
+	private int movingX[] = {1, 1, -1, -1, 2, 2, -2, -2};
+	private int movingLocation[][] = { { 2, 1 }, { -2, 1 }, { 2, -1 }, { -2, -1 }, { 1, 2 }, { -1, 2 }, { 1, -2 }, { -1, -2 } };
+
+	public Knight(int y, int x) {
+		this.y = y;
+		this.x = x;
+	}
+
+	@Override
+	public void move(int direction, int moveOrBack) {
+		// TODO Auto-generated method stub
+		y = y + moveOrBack * movingLocation[direction][0];
+		x = x + moveOrBack * movingLocation[direction][1];
+	}
+
+	public int getY() {
+		return y;
+	}
+	public int getX() {
+		return x;
+	}
+}

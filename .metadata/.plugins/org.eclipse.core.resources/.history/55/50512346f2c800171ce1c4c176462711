@@ -1,0 +1,22 @@
+
+public class Customer {
+	public void order(String menuName) {}
+}
+
+class MenuItem {
+	
+}
+
+class Menu {
+	
+}
+
+class Barista {
+	public Coffee makeCoffee(MenuItem menuItem) {
+		
+	}
+}
+
+class Coffee {
+	
+}

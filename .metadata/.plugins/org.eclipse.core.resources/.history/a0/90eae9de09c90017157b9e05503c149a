@@ -1,0 +1,33 @@
+package ModelImplement;
+
+import ModelInterface.IBoard;
+
+public class Board implements IBoard {
+	private int M, N;
+	private int map[][];
+
+	public Board(int M, int N) {
+		this.M = M;
+		this.N = N;
+	}
+
+	@Override
+	public boolean isOutOfBoard(int y, int x) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isAlreadyVisit(int y, int x) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	public int getM() {
+		return M;
+	}
+	public int getN() {
+		return N;
+	}
+
+}

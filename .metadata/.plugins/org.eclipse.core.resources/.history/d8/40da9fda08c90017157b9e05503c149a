@@ -1,0 +1,5 @@
+package ModelImplement;
+
+public class Board implements IBoard{
+
+}

@@ -1,0 +1,23 @@
+
+public class Customer implements {
+	public void order(String menuName, Menu menu, Barista barista) {}
+}
+
+class MenuItem {
+	
+}
+
+class Menu {
+	
+}
+
+class Barista {
+	public Coffee makeCoffee(MenuItem menuItem) {
+		return null;
+		
+	}
+}
+
+class Coffee {
+	
+}

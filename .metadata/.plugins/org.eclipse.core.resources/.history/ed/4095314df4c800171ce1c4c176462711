@@ -1,0 +1,56 @@
+import java.util.List;
+
+public class Customer implements ICustomer {
+	public void order(String menuName, Menu menu, Barista barista) {
+		MenuItem menuItem = menu.choose(menuName);
+		Coffee coffee = barista.makeCoffee(menuItem);
+	}
+}
+
+class MenuItem implements IMenuItem{
+	public MenuItem(String name, int price) {
+		this.name = name;
+		this.price = price;
+	}
+	
+	public int cost() {
+		return price;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+
+	@Override
+	public void MenuItem(String name, int price) {
+		// TODO Auto-generated method stub
+		
+	}
+}
+
+class Menu implements IMenu {
+	private List<MenuItem> items;
+
+	public Menu(List<MenuItem> items) {
+		this.items = items;
+	}
+	
+	public MenuItem choose(String name) {
+		for (MenuItem each : items) {
+			if (each.getName()
+		}
+		
+		return null;
+	}
+}
+
+class Barista {
+	public Coffee makeCoffee(MenuItem menuItem) {
+		return null;
+
+	}
+}
+
+class Coffee {
+
+}

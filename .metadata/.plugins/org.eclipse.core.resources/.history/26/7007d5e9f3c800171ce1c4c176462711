@@ -1,0 +1,39 @@
+import java.util.List;
+
+public class Customer implements ICustomer {
+	public void order(String menuName, Menu menu, Barista barista) {
+		MenuItem menuItem = menu.choose(menuName);
+		Coffee coffee = barista.makeCoffee(menuItem);
+	}
+}
+
+class MenuItem {
+
+}
+
+class Menu implements IMenu {
+	private List<MenuItem> items;
+
+	public Menu(List<MenuItem> items) {
+		this.items = items;
+	}
+	
+	public MenuItem choose(String name) {
+		for (MenuItem each : items) {
+			
+		}
+		
+		return null;
+	}
+}
+
+class Barista {
+	public Coffee makeCoffee(MenuItem menuItem) {
+		return null;
+
+	}
+}
+
+class Coffee {
+
+}

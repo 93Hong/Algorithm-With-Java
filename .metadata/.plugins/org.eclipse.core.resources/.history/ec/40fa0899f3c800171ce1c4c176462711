@@ -1,0 +1,28 @@
+
+public class Customer implements ICustomer {
+	public void order(String menuName, Menu menu, Barista barista) {
+		MenuItem menuItem = menu.choose(menuName);
+		
+	}
+}
+
+class MenuItem {
+
+}
+
+class Menu {
+	public MenuItem choose(String name) {
+		return null;
+	}
+}
+
+class Barista {
+	public Coffee makeCoffee(MenuItem menuItem) {
+		return null;
+
+	}
+}
+
+class Coffee {
+
+}

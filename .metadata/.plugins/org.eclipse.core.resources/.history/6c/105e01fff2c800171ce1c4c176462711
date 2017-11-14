@@ -1,0 +1,19 @@
+
+public interface ICustomer {
+	public void order(String menuName);
+}
+
+
+
+
+public interface IBarista {
+	public Coffee makeCoffee(MenuItem menuItem) {
+		
+	}
+}
+
+public interface ICoffee {
+	public Coffee(MenuItem menuItem) {
+		
+	}
+}
