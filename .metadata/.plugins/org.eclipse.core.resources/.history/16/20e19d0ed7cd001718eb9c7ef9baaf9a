@@ -1,0 +1,8 @@
+
+public class Main {
+	public static BufferedReader br = new Bufferedreader(InputStreamReader(System.in));
+	
+	public static void main(String args[]) {
+		
+	}
+}
