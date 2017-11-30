@@ -1,7 +1,0 @@
-package ModelImplement;
-
-import ModelInterface.IBoard;
-
-public class Board implements IBoard{
-
-}

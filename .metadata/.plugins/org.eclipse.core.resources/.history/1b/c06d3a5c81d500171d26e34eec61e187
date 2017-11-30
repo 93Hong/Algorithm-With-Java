@@ -29,6 +29,7 @@ public class NthGameApplication {
 				a /= n;
 			} while (a > 0);
 
+			ans += new StringBuffer(s).reverse().toString();
 			ans.append(s.reverse());
 			x++;
 		}

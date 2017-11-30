@@ -15,7 +15,7 @@ public class NthGameApplication {
 		m = Integer.parseInt(sub[2]);
 		p = Integer.parseInt(sub[3]);
 
-		StringBuffer ans = new StringBuffer();
+		String ans = "";
 		int x = 0;
 		while (ans.length() < t * m) {
 
@@ -23,13 +23,13 @@ public class NthGameApplication {
 			StringBuffer s = new StringBuffer();
 			do {
 				if (a % n > 9)
-					s.append(Character.toString((char) ('A' + (a % n - 10))));
+					s += (Character.toString((char) ('A' + (a % n - 10))));
 				else
-					s.append(a % n);
+					s += (a % n) + "";
 				a /= n;
 			} while (a > 0);
 
-			ans.append(s.reverse());
+			ans += new StringBuffer(s).reverse().toString();
 			x++;
 		}
 

@@ -1,7 +1,0 @@
-package ModelImplement;
-
-import ModelInterface.IKnight;
-
-public class Knight implements IKnight {
-
-}

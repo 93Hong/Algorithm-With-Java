@@ -1,8 +1,0 @@
-package ModelInterface;
-
-public interface IBoard {
-
-	public boolean isOutOfBoard(int y, int x) {
-		
-	}
-}
