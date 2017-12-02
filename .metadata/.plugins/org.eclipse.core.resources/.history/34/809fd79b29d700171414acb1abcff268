@@ -1,0 +1,10 @@
+
+public class Main {
+	public static void main(String args[]) {
+		HashMapList ha = new HashMapList<>();
+		
+		ArrayList<String> items = new ArrayList<>();
+		
+		ha.put("1", items);
+	}
+}

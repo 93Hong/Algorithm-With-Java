@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+
+public class Main {
+	public static void main(String args[]) {
+		HashMapList<> ha = new HashMapList<>();
+		
+		ArrayList<String> items = new ArrayList<>();
+		items.add("a");
+		items.add("b");
+		items.add("c");
+		
+		ha.put("1", items);
+	}
+}
