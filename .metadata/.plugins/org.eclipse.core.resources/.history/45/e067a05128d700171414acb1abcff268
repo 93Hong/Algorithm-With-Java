@@ -1,0 +1,6 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class HashMapList {
+	private HashMap<T, ArrayList<E>> map = new HashMap<T, ArrayList<E>>();
+}

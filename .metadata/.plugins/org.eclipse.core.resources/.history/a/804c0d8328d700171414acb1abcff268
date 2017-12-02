@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class HashMapList<T, E> {
+	private HashMap<T, ArrayList<E>> map = new HashMap<T, ArrayList<E>>();
+	
+	public void put(T key, E item) {
+		if (!map.containsKey(key)) {
+			map.put(key, new ArrayList<E>());
+		}
+		map.get(key).add(item);
+	}
+	
+	
+}
