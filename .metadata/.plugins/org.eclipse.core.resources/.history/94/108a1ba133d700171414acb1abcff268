@@ -1,0 +1,23 @@
+import java.util.HashMap;
+
+public class TrieNode {
+	private HashMap<Character, TrieNode> children;
+	private boolean terminates = false;
+	
+	private char character;
+	
+	public TrieNode() {
+		children = new HashMap<Character, TrieNode>();
+	}
+	
+	public TrieNode(char character) {
+		this();
+		this.character = character;
+	}
+	
+	public char getChar() {
+		return character;
+	}
+	
+	
+}

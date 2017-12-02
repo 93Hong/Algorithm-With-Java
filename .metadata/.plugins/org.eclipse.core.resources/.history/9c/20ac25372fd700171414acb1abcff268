@@ -1,0 +1,11 @@
+
+public class LinkedListNode {
+	public LinkedListNode next, prev, last;
+	public int data;
+	
+	public LinkedListNode(int d) {
+		data = d;
+	}
+	
+	
+}

@@ -1,0 +1,7 @@
+import java.util.HashMap;
+
+public class TrieNode {
+	private HashMap<Charactor, TrieNode> children;
+	private boolean terminates = false;
+	
+}

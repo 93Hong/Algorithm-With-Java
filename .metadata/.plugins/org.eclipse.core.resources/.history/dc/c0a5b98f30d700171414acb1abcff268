@@ -1,0 +1,7 @@
+
+public class Main {
+	public static void main(String args[]) {
+		LinkedListNode head = new LinkedListNode(3);
+		head.
+	}
+}
